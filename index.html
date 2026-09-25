@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dahiro Setup — Tối Ưu & Cài Đặt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Nút quay lên đầu trang -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Lên đầu trang">↑</a>
+
+<script>
+// Nút quay lên đầu trang
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('backToTop');
+  btn.classList.toggle('visible', window.scrollY > 300);
+});
+</script>    
+    <!-- === VÙNG CẢM ỨNG MÉP TRÊN (kích hoạt hiện menu như Taskbar) === -->
+    <div class="edge-trigger" id="edgeTrigger"></div>
+
+    <!-- === TAB KÉO MENU (dùng cho cảm ứng / không có chuột) === -->
+    <button class="menu-tab" id="menuTab" aria-label="Hiện menu">▾</button>
+
+    <!-- === MENU DÍNH ĐẦU - TỰ ẨN/HIỆN NHƯ TASKBAR === -->
+    <div class="menu-sticky-wrapper" id="menuStickyWrapper">
+        <nav class="menu" id="mainMenu">
+            <a href="https://discord.gg/6Hju3MZqfN" target="_blank" class="menu-card highlight" data-target="">
+                <span class="icon">💬</span>
+                <span class="label">Discord</span>
+            </a>
+            <a href="#windows" class="menu-card" data-target="windows">
+                <span class="icon">💻</span>
+                <span class="label">Windows</span>
+            </a>
+            <a href="#linux" class="menu-card" data-target="linux">
+                <span class="icon">🐧</span>
+                <span class="label">Linux</span>
+            </a>
+            <a href="#android" class="menu-card" data-target="android">
+                <span class="icon">📱</span>
+                <span class="label">Android</span>
+            </a>
+            <a href="#macos" class="menu-card" data-target="macos">
+                <span class="icon">🍎</span>
+                <span class="label">MacOs</span>
+            </a>
+            <a href="#iphone" class="menu-card" data-target="iphone">
+                <span class="icon">📲</span>
+                <span class="label">IPhone</span>
+            </a>
+            <a href="#ubuntu" class="menu-card" data-target="ubuntu">
+                <span class="icon">🟠</span>
+                <span class="label">Ubuntu</span>
+            </a>
+            <a href="https://bechandahiro.github.io/opticraft-page/" target="_blank" class="menu-card">
+                <span class="icon">✨</span>
+                <span class="label">OptiProjects</span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="avatar">⚡</div>
+            <h1>Dahiro Setup</h1>
+            <p class="slogan">Tối ưu máy tính · Hướng dẫn cài đặt · Công cụ miễn phí</p>
+            <p class="intro">
+                <span class="badge">✅ Không cần Root</span>
+                <span class="badge">🆓 Hoàn toàn miễn phí</span>
+                <span class="badge">🔄 Luôn cập nhật</span>
+            </p>
+            <a href="https://discord.gg/6Hju3MZqfN" target="_blank" class="discord-btn">💬 Tham Gia Discord</a>
+        </header>
+
+        <!-- === THANH TÌM KIẾM - Ở DƯỚI MENU === -->
+        <div class="search-sticky-wrapper" id="searchStickyWrapper">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Gõ tên phần mềm, công cụ, hướng dẫn…" 
+                    class="search-input"
+                >
+                <div id="searchResultCount" class="search-result-count"></div>
+            </div>
+        </div>
+
+        <!-- === ANDROID === -->
+        <section id="android" class="section" data-search="Morphe YouTube YTMusic Reddit chặn quảng cáo LibreTube NewPipe SkyTube Piped PipePipe YMusic SongTube GrayJay ReVanced Clipious Tubular Obtainium">
+            <h2><span class="section-icon">📱</span>Android — Ứng Dụng & Tinh Chỉnh</h2>
+
+            <div class="guide-item" data-search="Morphe tùy chỉnh ứng dụng YouTube YTMusic Reddit bản vá">
+                <h3>📱 Morphe — Tùy Chỉnh Ứng Dụng Android</h3>
+                <p>Công cụ chặn quảng cáo, nâng cao trải nghiệm & bảo mật cho YouTube, YTMusic, Reddit và 500+ ứng dụng ✨</p>
+                <ul class="list">
+                    <li><strong>🏠 Trang chủ:</strong> <a href="https://morphe.software/" target="_blank">morphe.software</a></li>
+                    <li><strong>📦 Bản vá:</strong> <a href="https://morphe-patches.software/#apps" target="_blank">morphe-patches.software/#apps</a> — 1,500+ bản vá, 500+ ứng dụng</li>
+                    <li><strong>🎬 Video hướng dẫn:</strong> <a href="https://youtu.be/2dXZGV6wcPI" target="_blank">Xem trên YouTube</a></li>
+                </ul>
+                <div class="note-bar">✅ Không cần Root · Hoàn toàn miễn phí · Luôn cập nhật</div>
+                <div class="note-bar">✅ Chặn quảng cáo YouTube/YTMusic • SponsorBlock • Tùy chỉnh giao diện</div>
+            </div>
+
+            <div class="guide-item" data-search="LibreTube YouTube không quảng cáo riêng tư mã nguồn mở">
+                <h3>📱🔒 LibreTube — Xem YouTube Không Quảng Cáo</h3>
+                <p>Ứng dụng thay thế YouTube • Không theo dõi • Hoàn toàn riêng tư 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Nguồn:</strong> <a href="https://libretube.dev/" target="_blank">libretube.dev</a></li>
+                    <li>✅ Không quảng cáo • Không dùng Google • SponsorBlock • Nhập đăng ký • Tải ngoại tuyến</li>
+                    <li>📱 Android 5.0+</li>
+                </ul>
+                <div class="note-bar">✅ Mã nguồn mở • Hoàn toàn riêng tư</div>
+            </div>
+
+            <div class="guide-item" data-search="YMusic nghe nhạc tiết kiệm dữ liệu phát nền YouTube">
+                <h3>📱🎵 YMusic — Nghe Nhạc Tiết Kiệm Dữ Liệu</h3>
+                <p>Phát chỉ âm thanh • Chạy nền • Tiết kiệm dung lượng 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Nguồn:</strong> <a href="https://ymusic.io/" target="_blank">ymusic.io</a></li>
+                    <li>✅ Phát âm thanh thôi • Tải về nghe offline • Không quảng cáo</li>
+                    <li>📱 Android 5.0+</li>
+                </ul>
+                <div class="note-bar">✅ Tiết kiệm dữ liệu cực nhiều • Giao diện đơn giản</div>
+            </div>
+
+            <div class="guide-item" data-search="NewPipe YouTube nhẹ riêng tư mã nguồn mở">
+                <h3>📱🔒 NewPipe — YouTube Nhẹ & Riêng Tư</h3>
+                <p>Không quảng cáo • Không theo dõi • Mã nguồn mở 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Trang chủ:</strong> <a href="https://newpipe.net/" target="_blank">newpipe.net</a></li>
+                    <li><strong>Tải:</strong> <a href="https://newpipe.net/#download" target="_blank">newpipe.net/#download</a></li>
+                    <li><strong>Kho cập nhật:</strong> <code>https://archive.newpipe.net/fdroid/repo/</code></li>
+                    <li>📱 Android 6.0+</li>
+                </ul>
+                <div class="note-bar">✅ Phát nền • Cửa sổ nổi • Hỗ trợ PeerTube/SoundCloud</div>
+            </div>
+
+            <div class="guide-item" data-search="SongTube YouTube đẹp nhẹ tối ưu âm nhạc">
+                <h3>📱🎵 SongTube — Khách YouTube Đẹp & Nhẹ</h3>
+                <p>Không quảng cáo • Tối ưu âm nhạc • Giao diện hiện đại 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Trang chủ:</strong> <a href="https://songtube.github.io/" target="_blank">songtube.github.io</a></li>
+                    <li>✅ Không quảng cáo • Tải cao chất lượng • Mã nguồn mở</li>
+                    <li>📱 Android</li>
+                </ul>
+                <div class="note-bar">✅ Tiết kiệm pin & dữ liệu • Không mua trong ứng dụng</div>
+            </div>
+
+            <div class="guide-item" data-search="SkyTube YouTube mã nguồn mở lọc nội dung">
+                <h3>📱🔒 SkyTube — YouTube Mã Nguồn Mở</h3>
+                <p>Không quảng cáo • Không cần Google • Lọc nội dung mạnh 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Nguồn:</strong> <a href="https://github.com/SkyTubeTeam/SkyTube" target="_blank">SkyTubeTeam/SkyTube</a></li>
+                    <li>✅ Hai phiên bản • Lọc kênh/video • SponsorBlock • Tải về</li>
+                    <li>📱 Android 4.4+ — hỗ trợ máy cũ!</li>
+                </ul>
+                <div class="note-bar">✅ Hoàn toàn miễn phí • Không mua trong ứng dụng</div>
+            </div>
+
+            <div class="guide-item" data-search="GrayJay hợp nhất nền tảng YouTube PeerTube">
+                <h3>📱🔮 GrayJay — Tất Cả Nền Tảng Một Nơi</h3>
+                <p>Theo dõi người tạo, không theo nền tảng • Hợp nhất YouTube, PeerTube… 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Trang chủ:</strong> <a href="https://grayjay.app/" target="_blank">grayjay.app</a></li>
+                    <li>✅ Nguồn hợp nhất • Phát nền • Tải ngoại tuyến • Bình luận phân tán</li>
+                    <li>📱 Android</li>
+                </ul>
+                <div class="note-bar">✅ Không bắt buộc trả phí • Mã nguồn mở</div>
+            </div>
+
+            <div class="guide-item" data-search="ReVanced Vanced YouTube YTMusic TikTok X Reddit Spotify">
+                <h3>📱✨ ReVanced — Tối Ưu Ứng Dụng Trên Điện Thoại</h3>
+                <p>Kế thừa Vanced • Tắt quảng cáo • Tính năng nâng cao 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Tải:</strong> <a href="https://revanced.app/download" target="_blank">revanced.app/download</a></li>
+                    <li>✅ Hỗ trợ YouTube • YTMusic • TikTok • X • Reddit • Spotify…</li>
+                    <li>📱 Android 8.0+ • Không cần Root</li>
+                </ul>
+                <div class="note-bar">✅ Tắt quảng cáo toàn bộ • Phát nền • Hình trong hình • SponsorBlock</div>
+            </div>
+
+            <div class="guide-item" data-search="Clipious Invidious riêng tư YouTube đã ngừng">
+                <h3>📱🔒 Clipious — Khách Invidious</h3>
+                <p>Riêng tư cho YouTube • ⚠️ Dự án đã ngừng phát triển 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Nguồn:</strong> <a href="https://github.com/lamarios/clipious" target="_blank">lamarios/clipious</a></li>
+                    <li>⚠️ Đã lưu trữ 29/01/2026 — vẫn dùng được</li>
+                    <li>✅ SponsorBlock+DeArrow • Phát nền • Tải về</li>
+                </ul>
+                <div class="note-bar">✅ Dùng Obtainium để cập nhật tự động</div>
+            </div>
+
+            <div class="guide-item" data-search="Tubular PipePipe Morphe thay thế đã ngừng">
+                <h3>📱🔒 Tubular — Đã Ngừng Phát Triển</h3>
+                <p>Mã nguồn mở ➡️ Chuyển sang công cụ thay thế 🎀✨</p>
+                <ul class="list">
+                    <li><strong>Nguồn:</strong> <a href="https://github.com/polymorphicshade/Tubular" target="_blank">polymorphicshade/Tubular</a></li>
+                    <li>⚠️ Đã lưu trữ 07/07/2026</li>
+                    <li>➡️ Thay thế: <a href="https://github.com/InfinityLoop1308/PipePipe" target="_blank">PipePipe</a> • <a href="https://morphe.software/" target="_blank">Morphe</a></li>
+                </ul>
+                <div class="note-bar">✅ Chuyển sang PipePipe hoặc Morphe để được hỗ trợ liên tục</div>
+            </div>
+        </section>
+
+        <!-- === WINDOWS === -->
+        <section id="windows" class="section" data-search="Revo Uninstaller WinRAR IDM 7-Zip Supermium Firefox CCleaner Process Explorer tối ưu Windows">
+            <h2><span class="section-icon">💻</span>Windows — Công Cụ & Tối Ưu</h2>
+            <ul class="list">
+                <li>✅ Vô hiệu hóa dịch vụ thừa → giảm tải nền</li>
+                <li>✅ Tắt hiệu ứng hình ảnh → tăng tốc máy yếu</li>
+                <li>✅ Dọn rác & tắt khởi động cùng hệ thống</li>
+                <li>✅ Tối ưu mạng → giảm lag, tải nhanh hơn</li>
+            </ul>
+            <h3 style="margin-top: 20px; color: var(--accent-purple);">🛠️ Công cụ đề xuất</h3>
+            <ul class="list">
+                <li>7-Zip — Giải nén thay WinRAR ✅</li>
+                <li>Supermium / Firefox — Trình duyệt nhẹ</li>
+                <li>CCleaner Portable — Dọn rác không cần cài đặt</li>
+                <li>Process Explorer — Xem tiến trình chi tiết</li>
+            </ul>
+
+            <h3 style="margin-top: 24px; margin-bottom: 16px;">📖 Hướng Dẫn Cài Đặt</h3>
+
+            <div class="guide-item" data-search="Revo Uninstaller Pro gỡ bỏ dọn rác Registry">
+                <h4>Revo Uninstaller Pro 5.5.2</h4>
+                <p>Gỡ bỏ hoàn toàn chương trình + dọn file rác & Registry</p>
+                <ul class="list">
+                    <li><strong>Trang chủ:</strong> <a href="https://www.revouninstaller.com/products/revo-uninstaller-pro/" target="_blank">revouninstaller-pro</a></li>
+                    <li><strong>Tải:</strong> <a href="https://1024terabox.com/s/1FF8QCWfqcAFh4cTLj9dB6Q" target="_blank">Terabox</a> · Mã: <code>K1K0</code></li>
+                    <li>💻 Windows 7–11 (32/64bit)</li>
+                </ul>
+            </div>
+
+            <div class="guide-item" data-search="WinRAR nén giải nén RAR ZIP 7Z ISO">
+                <h4>WinRAR 7.23</h4>
+                <p>Nén & Giải nén RAR/ZIP/7Z/ISO…</p>
+                <ul class="list">
+                    <li><strong>Trang chủ:</strong> <a href="https://www.win-rar.com/download.html" target="_blank">win-rar.com</a></li>
+                    <li><strong>Tải dự phòng:</strong> <a href="https://1024terabox.com/s/1d0QeHug0_mf9opKWJP4akA" target="_blank">Terabox</a> · Mã: <code>WiN5</code></li>
+                </ul>
+            </div>
+
+            <div class="guide-item" data-search="IDM Internet Download Manager tăng tốc tải">
+                <h4>IDM 6.43 Build 7</h4>
+                <p>Tăng tốc tải 8 lần · Tiếp tục ngắt quãng · Bắt link video</p>
+                <ul class="list">
+                    <li><strong>Tải cài:</strong> <a href="https://download.internetdownloadmanager.com/idman643build7.exe" target="_blank">idman643build7.exe</a></li>
+                    <li><strong>Kích hoạt:</strong> PowerShell Admin → <code>irm https://coporton.com/ias | iex</code> → chọn 4 → nhập tên → chọn 6</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- === LINUX === -->
+        <section id="linux" class="section" data-search="Linux tối ưu phần mềm lệnh">
+            <h2><span class="section-icon">🐧</span>Linux — Phần Mềm & Tinh Chỉnh</h2>
+            <p style="color: var(--text-soft); margin-bottom: 12px;">Đang cập nhật chi tiết…</p>
+            <ul class="list">
+                <li>📦 Quản lý gói · Cài đặt phần mềm</li>
+                <li>⚡ Tối ưu hệ thống · Tăng tốc khởi động</li>
+                <li>🔒 Bảo mật · Tường lửa · Quản lý người dùng</li>
+                <li>💻 Môi trường lập trình · Server · Dịch vụ</li>
+            </ul>
+            <div class="note-bar">✅ Sắp có hướng dẫn chi tiết — theo dõi Discord cập nhật sớm nhất!</div>
+        </section>
+
+        <!-- === MACOS === -->
+        <section id="macos" class="section" data-search="MacOS tối ưu ứng dụng">
+            <h2><span class="section-icon">🍎</span>MacOs — Ứng Dụng & Tinh Chỉnh</h2>
+            <p style="color: var(--text-soft); margin-bottom: 12px;">Đang cập nhật…</p>
+            <ul class="list">
+                <li>📦 Homebrew · Cài đặt ứng dụng</li>
+                <li>⚡ Tối ưu · Tiết kiệm pin</li>
+                <li>🧹 Dọn dẹp · Giải phóng bộ nhớ</li>
+                <li>🎨 Tùy chỉnh giao diện</li>
+            </ul>
+            <div class="note-bar">✅ Sắp có bài chi tiết!</div>
+        </section>
+
+        <!-- === IPHONE === -->
+        <section id="iphone" class="section" data-search="iPhone tối ưu ứng dụng">
+            <h2><span class="section-icon">📲</span>IPhone — Ứng Dụng & Tối Ưu</h2>
+            <p style="color: var(--text-soft); margin-bottom: 12px;">Đang cập nhật…</p>
+            <ul class="list">
+                <li>📥 Ứng dụng miễn phí hữu ích</li>
+                <li>⚡ Tối ưu hiệu năng · Tiết kiệm pin</li>
+                <li>🧹 Dọn dung lượng · Quản lý ảnh</li>
+                <li>🔒 Bảo mật · Quyền riêng tư</li>
+            </ul>
+            <div class="note-bar">✅ Sắp có bài chi tiết!</div>
+        </section>
+
+        <!-- === UBUNTU === -->
+        <section id="ubuntu" class="section" data-search="Ubuntu cài đặt phần mềm">
+            <h2><span class="section-icon">🟠</span>Ubuntu — Cài Đặt & Phần Mềm</h2>
+            <p style="color: var(--text-soft); margin-bottom: 12px;">Đang cập nhật…</p>
+            <ul class="list">
+                <li>💿 Cài đặt · Dual Boot</li>
+                <li>📦 Kho gói · Terminal</li>
+                <li>⚡ Tối ưu · Driver</li>
+                <li>🔧 Lệnh cơ bản · Quản lý hệ thống</li>
+            </ul>
+            <div class="note-bar">✅ Sắp có bài chi tiết!</div>
+        </section>
+
+        <footer>
+            © 2026 Dahiro Setup — Tự tinh chỉnh & chia sẻ 💪
+        </footer>
+    </div>
+
+    <!-- === JS: Menu tự ẩn/hiện như Taskbar Windows, tìm kiếm luôn hiện bên dưới === -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const searchResultCount = document.getElementById('searchResultCount');
+        const menuStickyWrapper = document.getElementById('menuStickyWrapper');
+        const edgeTrigger = document.getElementById('edgeTrigger');
+        const menuTab = document.getElementById('menuTab');
+        const sections = document.querySelectorAll('.section');
+        const guideItems = document.querySelectorAll('.guide-item');
+        const menuCards = document.querySelectorAll('.menu-card[data-target]');
+
+        let hideTimer = null;
+        const TOP_ZONE = 8;        // vùng cảm ứng mép trên (px) để hiện menu
+        const HIDE_DELAY = 700;    // độ trễ trước khi tự ẩn (giống Taskbar Windows)
+
+        function showMenu() {
+            clearTimeout(hideTimer);
+            menuStickyWrapper.classList.add('visible');
+            menuTab.classList.add('hidden-tab');
+        }
+
+        function scheduleHideMenu() {
+            clearTimeout(hideTimer);
+            hideTimer = setTimeout(() => {
+                menuStickyWrapper.classList.remove('visible');
+                menuTab.classList.remove('hidden-tab');
+            }, HIDE_DELAY);
+        }
+
+        // Hiện menu ngay khi ở đầu trang
+        if (window.scrollY < 40) showMenu(); else scheduleHideMenu();
+
+        // === DI CHUỘT SÁT MÉP TRÊN MÀN HÌNH → HIỆN MENU (như Taskbar) ===
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY <= TOP_ZONE) {
+                showMenu();
+            }
+        });
+
+        // Vùng cảm ứng riêng (hỗ trợ tốt hơn trên một số trình duyệt)
+        edgeTrigger.addEventListener('mouseenter', showMenu);
+
+        // Giữ menu hiện khi con trỏ đang ở trong menu
+        menuStickyWrapper.addEventListener('mouseenter', showMenu);
+        menuStickyWrapper.addEventListener('mouseleave', () => {
+            if (window.scrollY >= 40) scheduleHideMenu();
+        });
+
+        // === CHẠM / BẤM TAB ĐỂ HIỆN MENU (di động, không có chuột) ===
+        menuTab.addEventListener('click', () => {
+            if (menuStickyWrapper.classList.contains('visible')) {
+                menuStickyWrapper.classList.remove('visible');
+                menuTab.classList.remove('hidden-tab');
+                clearTimeout(hideTimer);
+            } else {
+                showMenu();
+                scheduleHideMenu();
+            }
+        });
+
+        // === CUỘN TRANG: ở đầu trang luôn hiện, cuộn xuống thì tự ẩn ===
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < 40) {
+                showMenu();
+            } else if (!menuStickyWrapper.matches(':hover')) {
+                scheduleHideMenu();
+            }
+            updateActiveMenu();
+        });
+
+        // === TÌM KIẾM ===
+        searchInput.addEventListener('input', function () {
+            const keyword = this.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            if (!keyword) {
+                sections.forEach(sec => sec.style.display = 'block');
+                guideItems.forEach(item => {
+                    item.style.display = 'block';
+                    item.style.borderLeft = 'none';
+                });
+                searchResultCount.textContent = '';
+                return;
+            }
+
+            sections.forEach(section => {
+                let sectionHasMatch = false;
+                const sectionName = section.querySelector('h2')?.textContent.toLowerCase() || '';
+                guideItems.forEach(item => {
+                    const searchText = (item.getAttribute('data-search') || '') + ' ' + item.textContent.toLowerCase();
+                    const isMatch = searchText.includes(keyword) || sectionName.includes(keyword);
+                    if (isMatch) {
+                        item.style.display = 'block';
+                        item.style.borderLeft = '3px solid var(--accent-green)';
+                        sectionHasMatch = true;
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                section.style.display = sectionHasMatch ? 'block' : 'none';
+            });
+
+            searchResultCount.textContent = visibleCount === 0 
+                ? '❌ Không tìm thấy kết quả' 
+                : `✅ Tìm thấy ${visibleCount} kết quả`;
+        });
+
+        // === MENU ACTIVE ===
+        function updateActiveMenu() {
+            let currentId = '';
+            const scrollPos = window.scrollY + 150;
+            sections.forEach(section => {
+                if (section.style.display === 'none') return;
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                if (scrollPos >= top && scrollPos < top + height) {
+                    currentId = section.getAttribute('id');
+                }
+            });
+            menuCards.forEach(card => {
+                const target = card.getAttribute('data-target');
+                card.classList.toggle('active', target === currentId);
+            });
+        }
+
+        menuCards.forEach(card => {
+            card.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                if (!targetId) return;
+                menuCards.forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+            });
+        });
+
+        updateActiveMenu();
+    </script>
+</body>
+</html>
