@@ -520,3 +520,49 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* === NÚT YOUTUBE — TỰ ẨN/HIỆN NHƯ TASKBAR === */
+.youtube-float {
+  position: fixed;
+  left: 20px;
+  bottom: 0;
+  padding: 8px 12px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(100%);
+  z-index: 999;
+}
+
+/* Khi di chuột vào góc dưới → hiện lên */
+.youtube-float:hover,
+body:hover > .youtube-float,
+.youtube-float:focus-within {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.youtube-float a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff0000;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.youtube-float a:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.45);
+}
+
+.yt-icon {
+  width: 20px;
+  height: 20px;
+}
