@@ -695,3 +695,124 @@ body:hover > .youtube-float,
     opacity: 1;
     transform: none;
 }
+
+/* === THÔNG BÁO CẬP NHẬT — GÓC PHẢI TRÊN === */
+.update-banner {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1003;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(167, 139, 250, 0.18));
+    color: var(--accent-blue);
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    max-width: 90%;
+    animation: bannerSlide 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.banner-close {
+    background: transparent;
+    border: none;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+.banner-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+.update-banner.hide {
+    animation: bannerHide 0.3s ease forwards;
+}
+@keyframes bannerSlide {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes bannerHide {
+    to { transform: translateY(-10px); opacity: 0; }
+}
+/* Bỏ khoảng trống trên cùng */
+body {
+    padding-top: 0;
+}
+
+/* === HÀNG MÃ + NÚT SAO CHÉP === */
+.code-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    flex-wrap: wrap;
+}
+.code-row code {
+    margin: 0;
+}
+.copy-btn {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+.copy-btn:hover {
+    background: rgba(56, 189, 248, 0.3);
+    transform: scale(1.1);
+}
+.copy-btn.copied {
+    background: rgba(52, 211, 153, 0.25);
+    border-color: var(--accent-green);
+}
+
+/* === XEM THÊM / THU GỌN === */
+.expandable-block {
+    margin-top: 10px;
+}
+.expand-toggle {
+    width: 100%;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--accent-blue);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+.expand-toggle:hover {
+    background: rgba(56, 189, 248, 0.15);
+    transform: translateY(-1px);
+}
+.expand-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.expand-content.open {
+    max-height: 3000px;
+    opacity: 1;
+    margin-top: 16px;
+}
+
+/* === ĐỈNH LẠI KHOẢNG CÁCH DO BANNER === */
+body {
+    padding-top: 40px;
+}
