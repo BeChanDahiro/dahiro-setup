@@ -247,6 +247,7 @@ body {
     padding: 18px 20px; margin-bottom: 14px;
     background: rgba(255,255,255,0.025); border-radius: var(--radius-sm);
     border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.3s ease, background 0.3s ease;
 }
 .guide-item h3 { color: var(--accent-purple); margin-bottom: 12px; }
 .guide-item h4 { color: var(--accent-green); margin: 18px 0 8px; }
@@ -303,34 +304,8 @@ body {
     height: 20px;
 }
 .youtube-fixed {
-    position: fixed;
-    bottom: 24px;
-    left: 24px;
-    background: #ff0000;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    z-index: 999;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: none; /* thay bằng .youtube-float ở trên, giữ để tương thích ngược */
 }
-
-.youtube-fixed:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
-.back-to-top {
-    position: fixed; right: 20px; bottom: 20px; z-index: 999;
-    width: 44px; height: 44px; border-radius: 50%;
-    background: rgba(15,23,42,0.75); border: 1px solid rgba(255,255,255,0.12);
-    color: var(--accent-blue); text-decoration: none;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transform: translateY(12px); pointer-events: none;
-    transition: all 0.3s ease;
-}
-.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
 footer { text-align: center; padding: 30px 20px 100px; color: var(--text-muted); font-size: 0.9rem; }
 
@@ -339,15 +314,6 @@ footer { text-align: center; padding: 30px 20px 100px; color: var(--text-muted);
     body { padding: 20px 10px 0; }
     .hero h1 { font-size: 2rem; }
     .section { padding: 20px 16px; }
-}
-.guide-item:hover {
-    border-color: rgba(56, 189, 248, 0.25);
-    background: rgba(56, 189, 248, 0.04);
-    transition: all 0.3s ease;
-}
-/* === Hiệu ứng khối phần mềm === */
-.guide-item {
-    transition: all 0.3s ease;
 }
 .guide-item:hover {
     border-color: rgba(56, 189, 248, 0.25);
@@ -373,49 +339,41 @@ footer { text-align: center; padding: 30px 20px 100px; color: var(--text-muted);
     width: 20px; height: 20px;
 }
 .discord-fixed {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #5865f2;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    z-index: 999;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: none; /* thay bằng .discord-float ở trên, giữ để tương thích ngược */
 }
 
-.discord-fixed:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-}
+/* Lên đầu trang — đặt chồng phía trên nút Discord (cùng cột phải) để không đè nhau */
 .back-to-top {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 50px;
-    height: 50px;
-    background: #5865f2;
-    color: white;
-    border: none;
+    bottom: 84px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--accent-blue);
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: opacity 0.3s ease, transform 0.2s ease;
+    z-index: 998;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
 }
-
-.back-to-top.show {
+.back-to-top.visible {
     opacity: 1;
-    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
 }
-
 .back-to-top:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    background: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent-blue);
+    transform: translateY(-3px);
 }
